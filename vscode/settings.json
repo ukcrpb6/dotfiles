@@ -1,7 +1,7 @@
 {
     "terminal.integrated.fontFamily": "\"SourceCodePro+Powerline+Awesome Regular\"",
-    "terminal.integrated.shell.osx": "/bin/zsh",
-    "terminal.integrated.shell.linux": "/bin/zsh",
+    "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
+    "terminal.integrated.shell.linux": "/usr/local/bin/zsh",
     "workbench.colorCustomizations": {
         "terminal.background":"#222222",
         "terminal.foreground":"#eceff1",
@@ -26,5 +26,16 @@
     },
     "terminal.integrated.fontSize": 14,
     "terminal.external.osxExec": "Hyper.app",
-    "terminal.integrated.scrollback": 10000
+    "terminal.integrated.scrollback": 10000,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "workbench.iconTheme": "vscode-icons",
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.tabSize": 2,
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }
