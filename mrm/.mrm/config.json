@@ -1,0 +1,12 @@
+{
+  "aliases": {
+    "node": [
+      "license",
+      "readme",
+      "editorconfig",
+      "gitignore",
+      "lint-staged",
+      "prettier"
+    ]
+  }
+}
