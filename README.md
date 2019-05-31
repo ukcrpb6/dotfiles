@@ -1,4 +1,4 @@
-![dotfiles](https://raw.githubusercontent.com/ukcrpb6/dotfiles/logo.svg)
+![dotfiles](logo.svg)
 
 # Reference
 
