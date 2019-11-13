@@ -1,4 +1,5 @@
 [alias]
+	caa = commit --amend -C HEAD
 	ci = commit
 	co = checkout
 	st = status
@@ -6,6 +7,10 @@
 	lg1 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
 	lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
 	please = push --force-with-lease
+	bclean = "!f() { git branch --merged ${1-master} | grep -v \" ${1-master}$\" | xargs -I{} git branch -d {}; }; f"
+	dsq = "!f() { git checkout -q ${1-master} && git for-each-ref refs/heads/ '--format=%(refname:short)' | while read branch; do mergeBase=$(git merge-base ${1-master} $branch) && [[ $(git cherry ${1-master} $(git commit-tree $(git rev-parse $branch^{tree}) -p $mergeBase -m _)) == '-'* ]] && git branch -D $branch; done }; f"
+	# quote-string = "!read -r l; printf \\\"!; printf %s \"$l\" | sed 's/\\([\\\"]\\)/\\\\\\1/g'; printf \" #\\\"\\n\" #"
+	# quote-string-undo = "!read -r l; printf %s \"$l\" | sed 's/\\\\\\([\\\"]\\)/\\1/g'; printf \"\\n\" #"
 [color]
 	ui = true
 [color "diff-highlight"]
@@ -36,5 +41,5 @@
 	path = /Users/bobb/.gitconfig.local
 [user]
 	name = Bob Browning
-	email = bob.browning@pressassociation.com
+	email = bob.browning@pamediagroup.com
 

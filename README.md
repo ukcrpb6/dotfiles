@@ -22,14 +22,14 @@ cp ~/src/github.com/figlet-fonts/* /usr/local/share/figlet/
 toilet -t -f 3d <phrase>
 
 # or copy into clipboard
-toilet -t -f 3d <phrase> | pbcopy 
+toilet -t -f 3d <phrase> | pbcopy
 ```
 
 # Notes
 
 ```zsh
 # Install zsh and plugin system
-brew install zsh 
+brew install zsh
 brew install zplug
 
 # Install stow for link management
@@ -46,8 +46,8 @@ sudo dscl . -change /Users/$USER UserShell $SHELL /usr/local/bin/zsh
 brew install fontconfig
 brew tap homebrew/cask-fonts
 brew cask install \
-  font-fontawesome \ 
-  font-awesome-terminal-fonts \ 
+  font-fontawesome \
+  font-awesome-terminal-fonts \
   font-hack \
   font-inconsolata-dz-for-powerline \
   font-inconsolata-g-for-powerline \
@@ -83,4 +83,6 @@ stow -t ~/Library/Application\ Support/Code/User vscode
 
 # Install insomnia rest client
 brew cask install insomnia
+
+npm install --global @commitlint/cli commitizen git-delete-squashed
 ```

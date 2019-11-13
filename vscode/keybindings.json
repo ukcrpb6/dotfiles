@@ -8,5 +8,13 @@
         "key": "cmd+k",
         "command": "-git.commitAll",
         "when": "!inDebugMode && !terminalFocus"
+    },
+    {
+        "key": "ctrl+cmd+b",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "cmd+b",
+        "command": "-workbench.action.toggleSidebarVisibility"
     }
 ]
